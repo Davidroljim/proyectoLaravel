@@ -14,9 +14,7 @@ use App\Http\Controllers\EditorialController;
 |
 */
 
-Route::get('/', function () {
-    return view('libros/listar');
-});
+Route::get('', [LibroController::class , 'listar']);
 
 Route::get('/libros', [LibroController::class , 'listar']);
 
