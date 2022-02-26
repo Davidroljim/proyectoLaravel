@@ -32,8 +32,6 @@ Route::get('/libros/mostrarUno/{ISBN}', [LibroController::class , 'listarUno']);
 
 Route::get('/libros/editar/{ISBN}', [LibroController::class , 'edit']);
 
-//Route::get('/libros/update/{libro}', [LibroController::class , 'update']);
-
 Route::post('/libros/realizarUpdate/{ISBN}', [LibroController::class , 'realizarUpdate']);
 
 Route::get('/dashboard', function () {
