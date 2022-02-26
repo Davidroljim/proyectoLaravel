@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Crear Libros</h1>
 <form action="/libros/crear" method ="POST">
 <ul>
     <li>
