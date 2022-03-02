@@ -32,6 +32,18 @@ Route::get('/libros/editar/{ISBN}', [LibroController::class , 'edit']);
 
 Route::post('/libros/realizarUpdate/{ISBN}', [LibroController::class , 'realizarUpdate']);
 
+Route::get('/home',function(){
+    return view ('layouts.index');
+});
+
+Route::get('/login',function(){
+    return view ('auth.login');
+});
+
+Route::get('/contact',function(){
+    return view ('layouts.contact');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
