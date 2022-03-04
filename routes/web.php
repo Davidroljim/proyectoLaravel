@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\EditorialController;
+use App\Http\Controllers\SendEmailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +32,12 @@ Route::get('/libros/mostrarUno/{ISBN}', [LibroController::class , 'listarUno']);
 Route::get('/libros/editar/{ISBN}', [LibroController::class , 'edit']);
 
 Route::post('/libros/realizarUpdate/{ISBN}', [LibroController::class , 'realizarUpdate']);
+
+Route::get('/emails/mail_view', [SendEmailController::class, 'create']);
+
+Route::post('/emails/mail_view', [SendEmailController::class , 'store']);
+
+Route::get('/emails/mailListar_view', [SendEmailController::class, 'index']);
 
 Route::get('/home',function(){
     return view ('layouts.index');

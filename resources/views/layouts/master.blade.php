@@ -27,6 +27,8 @@
         <a class="nav-link" href="/libros">Libros</a>
         <a class="nav-link" href="/libros/crear">Crear Libro</a>
         <a class="nav-link " href="/libros/crearEditorial">Crear Editorial</a>
+        <a class="nav-link " href="/emails/mail_view">Peticiones Libro</a>
+        <a class="nav-link " href="/emails/mailListar_view">Listar Peticiones</a>
       </div>
     </div>
   </div>
