@@ -3,8 +3,8 @@
 @section('content')
 <?php
     
-       echo ' <h1>Lista de peticiones</h1>';
-       echo "<table border= 1>";
+       echo ' <p class="h1 text-center">Lista de peticiones</p>';
+       echo "<table class='table'>";
        echo "<tr><th>Nombre</th><th>Correo</th><th>Título</tr>";
 
         foreach ($peticiones as $dato) {

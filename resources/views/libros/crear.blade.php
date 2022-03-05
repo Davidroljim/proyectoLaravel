@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('title','Editar Libros')
 @section('content')
-    <h1>Crear Libros</h1>
-<form action="/libros/crear" method ="POST">
+    <h1 class="text-center">Crear Libros</h1>
+<form class="text-center" action="/libros/crear" method ="POST">
 <ul>
     <li>
     <label>ISBN:</label>

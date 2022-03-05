@@ -23,12 +23,20 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
+        @guest
         <a class="nav-link active" aria-current="page" href="/login">Login</a>
+        @endguest
         <a class="nav-link" href="/libros">Libros</a>
+        @auth
         <a class="nav-link" href="/libros/crear">Crear Libro</a>
         <a class="nav-link " href="/libros/crearEditorial">Crear Editorial</a>
+        @endauth
+
         <a class="nav-link " href="/emails/mail_view">Peticiones Libro</a>
+        @auth
         <a class="nav-link " href="/emails/mailListar_view">Listar Peticiones</a>
+        @endauth
+
       </div>
     </div>
   </div>

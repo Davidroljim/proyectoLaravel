@@ -14,4 +14,5 @@
         echo "<h1>ISBN incorrecto</h1>";
     }
     ?>
+    <a class="btn btn-info" href="/libros/crearPDFLibro/{{$libro->ISBN}}"> Crear PDF</a>
 @endsection
