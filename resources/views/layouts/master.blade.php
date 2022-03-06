@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="">Inicio</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,7 +32,7 @@
         <a class="nav-link " href="/libros/crearEditorial">Crear Editorial</a>
         @endauth
 
-        <a class="nav-link " href="/emails/mail_view">Peticiones Libro</a>
+        <a class="nav-link " href="/emails/mail_view">Solicitar Libro</a>
         @auth
         <a class="nav-link " href="/emails/mailListar_view">Listar Peticiones</a>
         @endauth

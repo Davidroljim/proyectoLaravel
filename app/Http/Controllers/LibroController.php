@@ -27,7 +27,7 @@ class LibroController extends Controller
         return view("libros.editar", ['libro'=>$libro]);
     }
 
-public function realizarUpdate($ISBN, Request $request)
+    public function realizarUpdate($ISBN, Request $request)
     {
         $libro = Libro::find($ISBN);
         $libro->ISBN = $request->ISBN;
