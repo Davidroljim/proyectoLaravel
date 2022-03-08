@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\EditorialController;
+use App\Http\Controllers\PeliculasController;
 use App\Http\Controllers\SendEmailController;
 use App\Http\Controllers\PDFController;
 /*
@@ -42,6 +43,20 @@ Route::get('/emails/mailListar_view', [SendEmailController::class, 'index'])->mi
 
 Route::get('/libros/crearPDF/', [PDFController::class, 'pdfLibros']);
 Route::get('/libros/crearPDFLibro/{ISBN}', [PDFController::class, 'pdfLibro']);
+
+
+Route::get('/peliculas/crearPeliculas', [PeliculasController::class , 'create'])->middleware('auth');
+Route::post('/peliculas/crearPeliculas', [PeliculasController::class , 'store'])->middleware('auth');
+
+Route::get('/peliculas/listarPeliculas', [PeliculasController::class , 'index']);
+
+Route::get('/peliculas/listarUnaPelicula/{id}', [PeliculasController::class , 'listarUno']);
+
+Route::get('/peliculas/mailListar_view/{id}', [PeliculasController::class , 'enviarMail']);
+
+//Route::get('/peliculas/mailListar_view', [PeliculasController::class, 'index']);
+
+Route::get('/peliculas/crearPDF/', [PDFController::class, 'pdfPelis']);
 
 Route::get('/home',function(){
     return view ('layouts.index');

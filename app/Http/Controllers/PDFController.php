@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Libro;
+use App\Models\Peliculas;
  
 use PDF;
    
@@ -35,5 +36,16 @@ class PDFController extends Controller
         $pdf = PDF::loadView('libroPDF', $data);
      
         return $pdf->download('Libro.pdf');
+    }
+
+    public function pdfPelis()
+    {
+        $data = [
+            'peliculas' => Peliculas::all()
+        ];
+           
+        $pdf = PDF::loadView('test1PDF', $data);
+     
+        return $pdf->download('Peliculas.pdf');
     }
 }

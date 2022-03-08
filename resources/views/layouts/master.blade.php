@@ -37,6 +37,10 @@
         <a class="nav-link " href="/emails/mailListar_view">Listar Peticiones</a>
         @endauth
 
+        @auth
+        <a class="nav-link " href="/peliculas/crearPeliculas">Crear Pelicula</a>
+        @endauth
+        <a class="nav-link " href="/peliculas/listarPeliculas">Listado Pelicula</a>
       </div>
     </div>
   </div>
